@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->string('title'); // Project title
+            $table->text('description')->nullable(); // Brief description of the project
+            $table->string('video_url'); // URL of the video on YouTube or path to the file on the server
             $table->timestamps();
         });
+        
     }
 
     /**
